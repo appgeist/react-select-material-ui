@@ -1,0 +1,56 @@
+{
+  "name": "@appgeist/react-select-material-ui",
+  "version": "1.1.1",
+  "description": "An outlined Material-UI input component based on react-select",
+  "keywords": [
+    "react",
+    "react-select",
+    "material-ui",
+    "ui",
+    "material"
+  ],
+  "author": {
+    "name": "Ionut-Cristian Florescu",
+    "email": "ionut.florescu@gmail.com",
+    "url": "https://github.com/icflorescu"
+  },
+  "repository": "https://github.com/appgeist/react-select-material-ui",
+  "bugs": {
+    "url": "https://github.com/appgeist/react-select-material-ui/issues"
+  },
+  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "babel src --out-dir ./dist -s"
+  },
+  "files": [
+    "dist/*",
+    "index.d.ts"
+  ],
+  "peerDependencies": {
+    "@material-ui/core": "^4.3.1",
+    "@material-ui/styles": "^4.3.0",
+    "clsx": "^1.0.4",
+    "mdi-material-ui": "^6.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@appgeist/eslint-config-react": "^1.1.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^4.3.1",
+    "@material-ui/styles": "^4.3.0",
+    "@types/node": "^12.6.9",
+    "@types/react-select": "^3.0.0",
+    "clsx": "^1.0.4",
+    "mdi-material-ui": "^6.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6"
+  },
+  "dependencies": {
+    "react-select": "^3.0.4"
+  }
+}
