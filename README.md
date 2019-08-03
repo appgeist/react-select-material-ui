@@ -26,7 +26,7 @@ export default () => {
 
   return (
     <Fragment>
-      <h1>Kingdoms in King's Host</h1>
+      <h1>Fictional places:</h1>
       <Select
         id="place"
         label="Kingdom"
