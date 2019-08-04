@@ -11,7 +11,8 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(1.25),
     paddingLeft: theme.spacing(1.75),
     paddingRight: theme.spacing(0.25),
-    height: 'auto'
+    height: 'auto',
+    minHeight: 36
   }
 }));
 
