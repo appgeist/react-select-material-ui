@@ -3,6 +3,8 @@
 [![NPM version][npm-image]][npm-url]
 [![License][license-image]][license-url]
 
+![AppGeist React-Select-Material-UI](https://user-images.githubusercontent.com/581999/62422816-16dc7200-b6c1-11e9-940d-3638c26bdf93.png)
+
 An outlined [Material-UI](https://material-ui.com) input component based on [react-select](https://react-select.com/home), inspired by the [Autocomplete section in Material-UI docs](https://material-ui.com/components/autocomplete).
 
 Supports [react-select/async](https://react-select.com/async) and [react-select/creatable](https://react-select.com/creatable).
