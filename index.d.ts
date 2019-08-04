@@ -10,6 +10,7 @@ type BaseProps = ReactSelectProps<OptionType> &
 export interface SelectProps extends React.Props<Select>, BaseProps {
   id?: string;
   label?: string;
+  margin?: 'none' | 'normal' | 'dense';
   error?: boolean;
   helperText?: string;
   isAsync?: boolean;

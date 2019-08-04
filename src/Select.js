@@ -20,7 +20,18 @@ import DropdownIndicator from './DropdownIndicator';
 import ClearIndicator from './ClearIndicator';
 import IndicatorSeparator from './IndicatorSeparator';
 
-const Select = ({ id, label, helperText, error, isAsync, isCreatable, components, ...otherProps }) => {
+const Select = ({
+  id,
+  label,
+  placeholder,
+  margin,
+  helperText,
+  error,
+  isAsync,
+  isCreatable,
+  components,
+  ...otherProps
+}) => {
   const theme = useTheme();
   const selectStyles = {
     input: base => ({
@@ -48,6 +59,7 @@ const Select = ({ id, label, helperText, error, isAsync, isCreatable, components
           id={id}
           label={label}
           variant="outlined"
+          margin={margin}
           fullWidth
           value="..."
           error={error}
@@ -63,6 +75,7 @@ const Select = ({ id, label, helperText, error, isAsync, isCreatable, components
           label,
           fullWidth: true,
           variant: 'outlined',
+          margin,
           error,
           helperText,
           InputLabelProps: {
@@ -84,6 +97,7 @@ const Select = ({ id, label, helperText, error, isAsync, isCreatable, components
           IndicatorSeparator,
           ...components
         }}
+        placeholder={placeholder}
         {...otherProps}
       />
     </NoSsr>
@@ -93,18 +107,22 @@ const Select = ({ id, label, helperText, error, isAsync, isCreatable, components
 Select.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  helperText: PropTypes.string,
+  placeholder: PropTypes.string,
+  margin: PropTypes.oneOf(['none', 'normal', 'dense']),
   error: PropTypes.bool,
   isAsync: PropTypes.bool,
   isCreatable: PropTypes.bool,
+  helperText: PropTypes.string,
   components: PropTypes.shape()
 };
 
 Select.defaultProps = {
-  helperText: null,
+  placeholder: '',
+  margin: undefined,
   error: false,
   isAsync: false,
   isCreatable: false,
+  helperText: null,
   components: null
 };
 

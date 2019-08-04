@@ -8,18 +8,26 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
   chip: {
-    margin: theme.spacing(0.25, 0.25)
+    margin: theme.spacing(0.35, 0.5, 0.15, 0)
   },
   chipFocused: {
     backgroundColor: emphasize(theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[700], 0.08)
   }
 }));
 
-const MultiValue = ({ children, isFocused, removeProps }) => {
+const MultiValue = ({
+  children,
+  isFocused,
+  removeProps,
+  selectProps: {
+    TextFieldProps: { margin }
+  }
+}) => {
   const classes = useStyles();
 
   return (
     <Chip
+      size={margin === 'dense' ? 'small' : 'medium'}
       tabIndex={-1}
       label={children}
       className={clsx(classes.chip, { [classes.chipFocused]: isFocused })}
@@ -41,6 +49,11 @@ MultiValue.propTypes = {
   isFocused: PropTypes.bool.isRequired,
   removeProps: PropTypes.shape({
     onClick: PropTypes.func.isRequired
+  }).isRequired,
+  selectProps: PropTypes.shape({
+    TextFieldProps: PropTypes.shape({
+      margin: PropTypes.string
+    }).isRequired
   }).isRequired
 };
 

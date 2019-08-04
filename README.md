@@ -48,6 +48,7 @@ export default () => {
 
 - id (string);
 - label (string);
+- margin (string, one of 'none', 'normal' or 'dense')
 - error (string);
 - helperText (string);
 - isAsync (bool);

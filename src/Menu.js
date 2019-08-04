@@ -9,12 +9,12 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.shape.borderRadius,
     position: 'absolute',
     zIndex: 2,
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(0.5),
     left: 0,
     right: 0
   },
   withHelperText: {
-    marginTop: theme.spacing(-1.5)
+    marginTop: theme.spacing(-2)
   }
 }));
 
