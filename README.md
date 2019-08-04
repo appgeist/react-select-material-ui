@@ -64,7 +64,7 @@ export default () => {
 - prop-types;
 - clsx;
 - @material-ui/core;
-- material-ui/styles.
+- @material-ui/styles.
 
 ## License
 
