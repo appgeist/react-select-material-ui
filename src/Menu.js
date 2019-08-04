@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Paper, makeStyles } from '@material-ui/core';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Paper from '@material-ui/core/Paper';
 import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({

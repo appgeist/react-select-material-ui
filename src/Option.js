@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MenuItem } from '@material-ui/core';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const Option = ({ innerRef, isFocused, isSelected, innerProps, children }) => (
   <MenuItem

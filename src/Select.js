@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NoSsr, TextField, useTheme } from '@material-ui/core';
+import NoSsr from '@material-ui/core/NoSsr';
+import TextField from '@material-ui/core/TextField';
+import useTheme from '@material-ui/core/styles/useTheme';
 import ReactSelect from 'react-select';
 import AsyncReactSelect from 'react-select/async';
 import CreatableReactSelect from 'react-select/creatable';
 import AsyncCreatableReactSelect from 'react-select/async-creatable';
+
 import Control from './Control';
 import Menu from './Menu';
 import MultiValue from './MultiValue';

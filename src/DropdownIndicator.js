@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core';
-import { ChevronDown } from 'mdi-material-ui';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import SvgIcon from '@material-ui/core/SvgIcon';
 import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
@@ -24,7 +24,9 @@ const DropdownIndicator = ({ isFocused }) => {
   const classes = useStyles();
   return (
     <div aria-hidden className={clsx(classes.root, { [classes.rootFocused]: isFocused })}>
-      <ChevronDown />
+      <SvgIcon>
+        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+      </SvgIcon>
     </div>
   );
 };

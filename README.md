@@ -58,6 +58,14 @@ export default () => {
 - isCreatable (bool);
 - all other props are forwarded to react-select component - see [the API docs](https://react-select.com/props).
 
+## Peer dependencies
+
+- react (> 16.8 with hooks);
+- prop-types;
+- clsx;
+- @material-ui/core;
+- material-ui/styles.
+
 ## License
 
 The [ISC License](LICENSE).
