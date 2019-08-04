@@ -1,6 +1,6 @@
 {
   "name": "@appgeist/react-select-material-ui",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "An outlined Material-UI input component based on react-select",
   "keywords": [
     "react",
