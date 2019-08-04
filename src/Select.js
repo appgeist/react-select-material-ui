@@ -20,21 +20,7 @@ import DropdownIndicator from './DropdownIndicator';
 import ClearIndicator from './ClearIndicator';
 import IndicatorSeparator from './IndicatorSeparator';
 
-const components = {
-  Control,
-  Menu,
-  MultiValue,
-  NoOptionsMessage,
-  Option,
-  Placeholder,
-  SingleValue,
-  ValueContainer,
-  DropdownIndicator,
-  ClearIndicator,
-  IndicatorSeparator
-};
-
-const Select = ({ id, label, helperText, error, isAsync, isCreatable, ...otherProps }) => {
+const Select = ({ id, label, helperText, error, isAsync, isCreatable, components, ...otherProps }) => {
   const theme = useTheme();
   const selectStyles = {
     input: base => ({
@@ -84,7 +70,20 @@ const Select = ({ id, label, helperText, error, isAsync, isCreatable, ...otherPr
             shrink: true
           }
         }}
-        components={{ ...components, ...otherProps.components }}
+        components={{
+          Control,
+          Menu,
+          MultiValue,
+          NoOptionsMessage,
+          Option,
+          Placeholder,
+          SingleValue,
+          ValueContainer,
+          DropdownIndicator,
+          ClearIndicator,
+          IndicatorSeparator,
+          ...components
+        }}
         {...otherProps}
       />
     </NoSsr>
@@ -94,17 +93,19 @@ const Select = ({ id, label, helperText, error, isAsync, isCreatable, ...otherPr
 Select.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  helperText: PropTypes.string,
   error: PropTypes.bool,
   isAsync: PropTypes.bool,
   isCreatable: PropTypes.bool,
-  helperText: PropTypes.string
+  components: PropTypes.shape()
 };
 
 Select.defaultProps = {
+  helperText: null,
   error: false,
   isAsync: false,
   isCreatable: false,
-  helperText: null
+  components: null
 };
 
 export default Select;
