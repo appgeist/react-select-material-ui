@@ -44,12 +44,6 @@ export default () => {
 };
 ```
 
-## Async/creatable select
-
-- Providing an `{ isAsync: true }` prop a will generate an [async](https://react-select.com/async) select;
-- Providing an `{ isCreatable: true }` prop a will generate a [creatable](https://react-select.com/creatable) select;
-- `isAsync` and `isCreatable` can be combined.
-
 ## Component props
 
 - id (string);
@@ -59,6 +53,43 @@ export default () => {
 - isAsync (bool);
 - isCreatable (bool);
 - all other props are forwarded to react-select component - see [the API docs](https://react-select.com/props).
+
+## Async/creatable select
+
+- Providing an `{ isAsync: true }` prop a will generate an [async](https://react-select.com/async) select;
+- Providing an `{ isCreatable: true }` prop a will generate a [creatable](https://react-select.com/creatable) select;
+- `isAsync` and `isCreatable` can be combined.
+
+## Replacing react-select components
+
+You can augment the layout and functionality by providing [custom react-select components](https://react-select.com/components) in a `components` property like so:
+
+```js
+const Option = props => {
+  // custom Option implementation
+};
+
+const ClearIndicator = props => {
+  // custom ClearIndicator implementation
+};
+
+return (
+  <Select
+    id="place"
+    label="Kingdom"
+    placeholder="Select a kingdom"
+    options={KINGDOMS}
+    value={kingdom}
+    onChange={setKingdom}
+    isClearable
+    helperText="Where would you like to live?"
+    components={{
+      Option,
+      ClearIndicator
+    }}
+  />
+);
+```
 
 ## Peer dependencies
 

@@ -84,7 +84,7 @@ const Select = ({ id, label, helperText, error, isAsync, isCreatable, ...otherPr
             shrink: true
           }
         }}
-        components={components}
+        components={{ ...components, ...otherProps.components }}
         {...otherProps}
       />
     </NoSsr>
