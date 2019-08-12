@@ -94,7 +94,7 @@ return (
 
 ## Peer dependencies
 
-- react (> 16.8 with hooks);
+- react (> 16.9);
 - prop-types;
 - clsx;
 - @material-ui/core;
