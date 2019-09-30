@@ -6,7 +6,7 @@ import Chip from '@material-ui/core/Chip';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import clsx from 'clsx';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   chip: {
     margin: theme.spacing(0.35, 0.5, 0.15, 0)
   },
@@ -32,6 +32,7 @@ const MultiValue = ({
       label={children}
       className={clsx(classes.chip, { [classes.chipFocused]: isFocused })}
       onDelete={removeProps.onClick}
+      // prettier-ignore
       deleteIcon={(
         <SvgIcon {...removeProps}>
           <path
@@ -39,7 +40,7 @@ const MultiValue = ({
             d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
           />
         </SvgIcon>
-)}
+      )}
     />
   );
 };

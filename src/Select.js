@@ -34,7 +34,7 @@ const Select = ({
 }) => {
   const theme = useTheme();
   const selectStyles = {
-    input: base => ({
+    input: (base) => ({
       ...base,
       'color': theme.palette.text.primary,
       '& input': {
@@ -43,6 +43,7 @@ const Select = ({
     })
   };
 
+  // prettier-ignore
   const SelectControl = isAsync
     ? isCreatable
       ? AsyncCreatableReactSelect
@@ -53,8 +54,7 @@ const Select = ({
 
   return (
     <NoSsr
-      // prettier-ignore
-      fallback={(
+      fallback={
         <TextField
           id={id}
           label={label}
@@ -66,7 +66,7 @@ const Select = ({
           helperText={helperText}
           disabled
         />
-      )}
+      }
     >
       <SelectControl
         styles={selectStyles}

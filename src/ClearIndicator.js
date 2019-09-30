@@ -4,7 +4,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import clsx from 'clsx';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     'display': 'flex',
     'padding': theme.spacing(1),
