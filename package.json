@@ -1,6 +1,6 @@
 {
   "name": "@appgeist/react-select-material-ui",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "An outlined Material-UI input component based on react-select",
   "keywords": [
     "react",
@@ -21,6 +21,7 @@
   "license": "ISC",
   "main": "dist/index.js",
   "scripts": {
+    "lint": "eslint .",
     "prepublishOnly": "babel src --out-dir ./dist -s"
   },
   "files": [
@@ -28,28 +29,28 @@
     "index.d.ts"
   ],
   "peerDependencies": {
-    "@material-ui/core": "^4.4.3",
-    "@material-ui/styles": "^4.4.3",
+    "@material-ui/core": "^4.5.0",
+    "@material-ui/styles": "^4.5.0",
     "clsx": "^1.0.4",
     "prop-types": "^15.7.2",
-    "react": "^16.10.1"
+    "react": "^16.10.2"
   },
   "devDependencies": {
-    "@appgeist/eslint-config-react": "^1.4.1",
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
-    "@material-ui/core": "^4.4.3",
-    "@material-ui/styles": "^4.4.3",
-    "@types/node": "^12.7.8",
-    "@types/react-select": "^3.0.4",
+    "@appgeist/eslint-config-react": "^1.4.2",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@material-ui/core": "^4.5.0",
+    "@material-ui/styles": "^4.5.0",
+    "@types/node": "^12.7.12",
+    "@types/react-select": "^3.0.5",
     "babel-plugin-root-import": "^6.4.1",
     "clsx": "^1.0.4",
     "prop-types": "^15.7.2",
-    "react": "^16.10.1"
+    "react": "^16.10.2"
   },
   "dependencies": {
-    "react-select": "^3.0.5"
+    "react-select": "^3.0.8"
   }
 }
