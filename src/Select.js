@@ -54,7 +54,7 @@ const Select = ({
 
   return (
     <NoSsr
-      fallback={
+      fallback={(
         <TextField
           id={id}
           label={label}
@@ -66,7 +66,7 @@ const Select = ({
           helperText={helperText}
           disabled
         />
-      }
+      )}
     >
       <SelectControl
         styles={selectStyles}
